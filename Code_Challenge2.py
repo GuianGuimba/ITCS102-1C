@@ -1,4 +1,4 @@
-eposit = eval(input("enter your amount to deposit >>>"))
+deposit = eval(input("enter your amount to deposit >>>"))
 print("Here is the breakdown of your deposit.")
 
 n1000 = deposit // 1000
