@@ -103,7 +103,7 @@ while True:
     elif choice == 'f': #Export Data / Saving
         pass
         print("EXPORT DATA")
-        with open('student_record.json':'w') as new_file:
+        with open('student_record.json','w') as new_file:
             json.dump(student_record, new_file, indent=4)
         continue
     elif choice == 'g':
