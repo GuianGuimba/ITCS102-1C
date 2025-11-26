@@ -14,7 +14,8 @@ while True:
     "D - Delete Student Record\n" \
     "E - Print all Student Info\n" \
     "F - Export Data\n" \
-    "G - Exit System\n")
+    "G - Import Data\n" \
+    "X - Exit System\n")
 
     choice = input("Input your choice => ").lower().strip()
     if choice == 'a': #Adding A Student Record
@@ -101,12 +102,23 @@ while True:
 
         continue
     elif choice == 'f': #Export Data / Saving
-        pass
-        print("EXPORT DATA")
+        print("EXPORTING DATA")
         with open('student_record.json','w') as new_file:
             json.dump(student_record, new_file, indent=4)
+        
+        print("DATA EXPORTED SUCCESFULLY")
         continue
+
     elif choice == 'g':
+        print("IMPORTING DATA")
+        with open('student_record.json','r') as new_file:
+            imported_student = json.load(new_file)
+
+        student_record = imported_student
+        print("DATA IMPORTED SUCCESFULLY")
+        continue
+        
+    elif choice == 'x':
         print("You have now exited the program")
         break
     else:
