@@ -2,10 +2,10 @@ import os
 import json
 os.system('cls')
 
-username = input("What is your name?").title()
+username = input("What is your name? ").title()
 
 while True:
-    program = input(f"Are you opening the program?\nYes or No ==>").lower().strip()
+    program = input(f"Are you opening the program?\nYes or No ==> ").lower().strip()
     if program == 'yes' :
         os.system('cls')
         print(f"Hi! {username}, Welcome to my Program!")
@@ -207,11 +207,11 @@ while True:
                     if InputB == 'b':
                         os.system('cls')
                         print(
-                            "===== EXAMPLE OF VARIABLES =====\n\n" \
+                            "===== EXAMPLE OF VARIABLES =====\n\n"
                             
-                            "Input:\n" \
+                            "Input:\n" 
                             "\tString = \"Hello World\"\n"                           
-                            "\tintegers = 21 + 48\n"
+                            "\tintegers = 21 + 51\n"
                             "\tevaluation = input(\"Input your grades here\") #user inputs 95\n\n"
 
                             "\tprint(string)\n"
@@ -220,7 +220,7 @@ while True:
 
                             "Output:\n"
                             "\tHello World\n"
-                            "\t69\n"
+                            "\t72\n"
                             "\t95\n\n"
                         )
 
@@ -262,6 +262,173 @@ while True:
                             "========================================\n"
                         )
                         continue
+                    elif InputC == 'b': #EXAMPLES OF OPERATORS
+                        os.system('cls')
+                        OperatorsInput = input(
+                            "===== EXAMPLE OF OPERATORS =====\n\n"
+
+                            "A. ARITHMETIC OPERATOR\n"
+                            "B. ASSIGNMENT OPERATOR\n"
+                            "C. RELATIONAL OPERATOR\n"
+                            "D. LOGICAL OPERATOR\n\n"
+
+                            "================================\n"
+                        ).lower().strip()
+                        if OperatorsInput == 'a': #ARITHMETIC OPERATOR
+                            os.system('cls')
+                            while True:
+                                AriChoice = input(
+                                    "===== ARITHMETIC OPERATOR =====\n\n"
+
+                                    "A. DEFINITION\n"
+                                    "B. EXAMPLE\n"
+                                    "X. RETURN\n\n"
+
+                                    "===============================\n"
+
+                                ).lower().strip()
+
+                                if AriChoice == 'a':
+                                    os.system('cls')
+                                    print(
+                                        "===== DEFINITION OF ARITHMETIC OPERATOR =====\n\n"
+
+                                        "Arithmetic operators are symbols used in\n"
+                                        "Python to perform basic mathematical\n"
+                                        "operations on numbers or variables.\n\n"
+
+                                        "=============================================\n"
+                                    )
+                                elif AriChoice == 'b':
+                                    os.system('cls')
+                                    print("===== EXAMPLE OF ARITHMETIC OPERATOR =====\n\n")
+
+                                    while True:
+                                        try:
+                                            a = float(input("Input 1st number => "))
+                                            b = float(input("Input 2nd number => "))
+                                            break
+                                        except ValueError:
+                                            os.system('cls')
+                                            print("\nInvalid Input! Please enter a number only!\n")
+
+                                    Addition = a + b
+                                    Subtracton = a - b
+                                    Multiplication = a * b
+                                    Division = a / b
+                                    Floor_Division = a // b
+                                    Modulus = a % b
+                                    Exponent = a ** b
+
+                                    print("\n"
+                                    f"Addition = {Addition}\n"
+                                    f"Subtraction = {Subtracton}\n"
+                                    f"Multiplication = {Multiplication}\n"
+                                    f"Division = {Division}\n"
+                                    f"Floor Division (Whole Number) = {Floor_Division}\n"
+                                    f"Modulus (Remainder) = {Modulus}\n"
+                                    f"Exponent (Power) = {Exponent}\n\n"
+                                    )
+
+                                    ExAriChoice = input(
+                                        "============================================\n\n"
+                                        "Do you want to see inside of the code? (Yes/No) ").lower().strip()
+
+                                    if ExAriChoice == 'yes':
+                                        os.system('cls')
+                                        print(
+                                        "\n=================================================================\n\n"
+                                        "while True\n"
+                                        "\tTry:\n"
+                                        "\t\ta = eval(input(\"Input 1st number => \"))\n"
+                                        "\t\tb = eval(input(\"Input 2nd number => \"))\n"
+                                        "\t\tbreak\n"
+                                        "\texcept ValueError:\n"
+                                        "\t\tos.system('cls')"
+                                        "\t\tprint(\"\\nInvalid Input! Please enter a number only!\\n)\n\n"
+
+                                        "Addition = a + b\n"
+                                        "Subtracton = a - b\n"
+                                        "Multiplication = a * b\n"
+                                        "Division = a / b\n"
+                                        "Floor_Division = a // b\n"
+                                        "Modulus = a % b\n"
+                                        "Exponent = a ** b\n\n"
+
+                                        "print(\"\\n\"\n"
+                                        "f\"Addition = \{Addition}\\n\"\n"
+                                        "f\"Subtraction = {Subtracton}\\n\"\n"
+                                        "f\"Multiplication = {Multiplication}\\n\"\n"
+                                        "f\"Division = {Division}\n"
+                                        "f\"Floor Division (Whole Number) = {Floor_Division}\\n\"\n"
+                                        "f\"Modulus (Remainder) = {Modulus}\\n\"\n"
+                                        "f\"Exponent (Power) = {Exponent}\\n\\n\n"
+                                        ")\n\n"
+                                        "=================================================================\n\n"
+                                        )
+                                    else:
+                                        os.system('cls')
+                                        print("Returning...")
+
+                                elif AriChoice == 'x':
+                                    os.system('cls')
+                                    print("Returning...")
+                                    break
+                                else:
+                                    os.system('cls')
+                                    print("Invalid Input.. Please Try Again..")
+                                    continue
+
+                        elif OperatorsInput == 'b': #ASSIGNMENT OPERATOR
+                            os.system('cls')
+                            while True:
+                                AriChoice = input(
+                                    "===== ASSIGNMENT OPERATOR =====\n\n"
+
+                                    ""
+                                    ""
+                                    ""
+
+                                    "================================\n"
+
+                                ).lower().strip()
+
+                        elif OperatorsInput == 'c': #RELATIONAL OPERATOR
+                            os.system('cls')
+                            while True:
+                                AriChoice = input(
+                                    "===== ARITHMETIC OPERATOR =====\n\n"
+
+                                    ""
+                                    ""
+                                    ""
+
+                                    "================================\n"
+
+                                ).lower().strip()
+
+                        elif OperatorsInput == 'd': #LOGICAL OPERATOR
+                            os.system('cls')
+                            while True:
+                                AriChoice = input(
+                                    "===== ARITHMETIC OPERATOR =====\n\n"
+
+                                    ""
+                                    ""
+                                    ""
+
+                                    "================================\n"
+
+                                ).lower().strip()
+
+                        elif OperatorsInput == 'x':
+                            os.system('cls')
+                            print("Returning to SUB MENU!")
+                            break
+                        else:
+                            os.system('cls')
+                            print("Invalid Input.. Please Try Again..")
+                            continue
 
                     elif InputC == 'x':
                         os.system('cls')
