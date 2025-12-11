@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 os.system('cls')
 
@@ -22,7 +23,6 @@ while True:
                                 "H. HELP\n"
                                 "X. EXIT\n\n"
                                 "=========================================\n\n"
-                                "=>"
                             ).lower().strip()
             
             if user_inputs == 'a': #PRINTS
@@ -64,6 +64,8 @@ while True:
 
                             "=======================================\n"
                         )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
                         continue
 
                     elif InputA == 'b':#EXAMPLES OF PRINTS
@@ -99,6 +101,8 @@ while True:
                                                            
                                     "==============================\n\n"
                                 )
+                                input("Press ENTER to return to the menu...")
+                                os.system('cls')
                                 continue
 
                             elif ExampleInput == 'b':
@@ -118,6 +122,8 @@ while True:
 
                                     "===================================================\n\n"                                                                   
                                 )
+                                input("Press ENTER to return to the menu...")
+                                os.system('cls')
                                 continue
 
                             elif ExampleInput == 'c':
@@ -136,6 +142,8 @@ while True:
                                     f"\t{username}\n\n"
                                     "===============================\n"
                                 )
+                                input("Press ENTER to return to the menu...")
+                                os.system('cls')
                                 continue
 
                             elif ExampleInput == 'd':
@@ -155,6 +163,8 @@ while True:
                                 
                                     "========================================\n"
                                 )
+                                input("Press ENTER to return to the menu...")
+                                os.system('cls')
                                 continue
 
                             elif ExampleInput == 'x':
@@ -202,12 +212,14 @@ while True:
                             
                             "========================================\n"
                         )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
                         continue
 
                     if InputB == 'b':
                         os.system('cls')
                         print(
-                            "===== EXAMPLE OF VARIABLES =====\n\n"
+                            "========================= EXAMPLE OF VARIABLES =========================\n\n"
                             
                             "Input:\n" 
                             "\tString = \"Hello World\"\n"                           
@@ -222,7 +234,11 @@ while True:
                             "\tHello World\n"
                             "\t72\n"
                             "\t95\n\n"
+
+                            "========================================================================\n\n"
                         )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
 
 
                     elif InputB == 'x':
@@ -248,7 +264,6 @@ while True:
                                     "X. RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
-                                    "=>"
                                 ).lower().strip()
                     if InputC == 'a':
                         os.system('cls')
@@ -261,174 +276,380 @@ while True:
 
                             "========================================\n"
                         )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
                         continue
                     elif InputC == 'b': #EXAMPLES OF OPERATORS
                         os.system('cls')
-                        OperatorsInput = input(
-                            "===== EXAMPLE OF OPERATORS =====\n\n"
+                        while True:
+                            OperatorsInput = input(
+                                "===== EXAMPLE OF OPERATORS =====\n\n"
 
-                            "A. ARITHMETIC OPERATOR\n"
-                            "B. ASSIGNMENT OPERATOR\n"
-                            "C. RELATIONAL OPERATOR\n"
-                            "D. LOGICAL OPERATOR\n\n"
+                                "A. ARITHMETIC OPERATOR\n"
+                                "B. ASSIGNMENT OPERATOR\n"
+                                "C. RELATIONAL OPERATOR\n"
+                                "D. LOGICAL OPERATOR\n"
+                                "X. RETURN TO SUB MENU\n\n"
 
-                            "================================\n"
-                        ).lower().strip()
-                        if OperatorsInput == 'a': #ARITHMETIC OPERATOR
-                            os.system('cls')
-                            while True:
-                                AriChoice = input(
-                                    "===== ARITHMETIC OPERATOR =====\n\n"
+                                "================================\n"
+                            ).lower().strip()
+                            if OperatorsInput == 'a': #ARITHMETIC OPERATOR
+                                os.system('cls')
+                                while True:
+                                    AriChoice = input(
+                                        "===== ARITHMETIC OPERATOR =====\n\n"
 
-                                    "A. DEFINITION\n"
-                                    "B. EXAMPLE\n"
-                                    "X. RETURN\n\n"
+                                        "A. DEFINITION\n"
+                                        "B. EXAMPLE\n"
+                                        "X. RETURN\n\n"
 
-                                    "===============================\n"
+                                        "===============================\n"
+                                    ).lower().strip()
 
-                                ).lower().strip()
-
-                                if AriChoice == 'a':
-                                    os.system('cls')
-                                    print(
-                                        "===== DEFINITION OF ARITHMETIC OPERATOR =====\n\n"
-
-                                        "Arithmetic operators are symbols used in\n"
-                                        "Python to perform basic mathematical\n"
-                                        "operations on numbers or variables.\n\n"
-
-                                        "=============================================\n"
-                                    )
-                                elif AriChoice == 'b':
-                                    os.system('cls')
-                                    print("===== EXAMPLE OF ARITHMETIC OPERATOR =====\n\n")
-
-                                    while True:
-                                        try:
-                                            a = float(input("Input 1st number => "))
-                                            b = float(input("Input 2nd number => "))
-                                            break
-                                        except ValueError:
-                                            os.system('cls')
-                                            print("\nInvalid Input! Please enter a number only!\n")
-
-                                    Addition = a + b
-                                    Subtracton = a - b
-                                    Multiplication = a * b
-                                    Division = a / b
-                                    Floor_Division = a // b
-                                    Modulus = a % b
-                                    Exponent = a ** b
-
-                                    print("\n"
-                                    f"Addition = {Addition}\n"
-                                    f"Subtraction = {Subtracton}\n"
-                                    f"Multiplication = {Multiplication}\n"
-                                    f"Division = {Division}\n"
-                                    f"Floor Division (Whole Number) = {Floor_Division}\n"
-                                    f"Modulus (Remainder) = {Modulus}\n"
-                                    f"Exponent (Power) = {Exponent}\n\n"
-                                    )
-
-                                    ExAriChoice = input(
-                                        "============================================\n\n"
-                                        "Do you want to see inside of the code? (Yes/No) ").lower().strip()
-
-                                    if ExAriChoice == 'yes':
+                                    if AriChoice == 'a':
                                         os.system('cls')
                                         print(
-                                        "\n=================================================================\n\n"
-                                        "while True\n"
-                                        "\tTry:\n"
-                                        "\t\ta = eval(input(\"Input 1st number => \"))\n"
-                                        "\t\tb = eval(input(\"Input 2nd number => \"))\n"
-                                        "\t\tbreak\n"
-                                        "\texcept ValueError:\n"
-                                        "\t\tos.system('cls')"
-                                        "\t\tprint(\"\\nInvalid Input! Please enter a number only!\\n)\n\n"
+                                            "===== DEFINITION OF ARITHMETIC OPERATOR =====\n\n"
 
-                                        "Addition = a + b\n"
-                                        "Subtracton = a - b\n"
-                                        "Multiplication = a * b\n"
-                                        "Division = a / b\n"
-                                        "Floor_Division = a // b\n"
-                                        "Modulus = a % b\n"
-                                        "Exponent = a ** b\n\n"
+                                            "Arithmetic operators are symbols used in\n"
+                                            "Python to perform basic mathematical\n"
+                                            "operations on numbers or variables.\n\n"
 
-                                        "print(\"\\n\"\n"
-                                        "f\"Addition = \{Addition}\\n\"\n"
-                                        "f\"Subtraction = {Subtracton}\\n\"\n"
-                                        "f\"Multiplication = {Multiplication}\\n\"\n"
-                                        "f\"Division = {Division}\n"
-                                        "f\"Floor Division (Whole Number) = {Floor_Division}\\n\"\n"
-                                        "f\"Modulus (Remainder) = {Modulus}\\n\"\n"
-                                        "f\"Exponent (Power) = {Exponent}\\n\\n\n"
-                                        ")\n\n"
-                                        "=================================================================\n\n"
+                                            "=============================================\n"
                                         )
-                                    else:
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+
+                                    elif AriChoice == 'b':
+                                        os.system('cls')
+                                        print("===== EXAMPLE OF ARITHMETIC OPERATOR =====\n")
+
+                                        while True:
+                                            try:
+                                                a = float(input("Input 1st number => "))
+                                                b = float(input("Input 2nd number => "))
+                                                break
+                                            except ValueError:
+                                                os.system('cls')
+                                                print("\nInvalid Input! Please enter a number only!\n")
+
+                                        Addition = a + b
+                                        Subtracton = a - b
+                                        Multiplication = a * b
+                                        Division = a / b
+                                        Floor_Division = a // b
+                                        Modulus = a % b
+                                        Exponent = a ** b
+
+                                        print("\n"
+                                        f"Addition = {Addition}\n"
+                                        f"Subtraction = {Subtracton}\n"
+                                        f"Multiplication = {Multiplication}\n"
+                                        f"Division = {Division}\n"
+                                        f"Floor Division (Whole Number) = {Floor_Division}\n"
+                                        f"Modulus (Remainder) = {Modulus}\n"
+                                        f"Exponent (Power) = {Exponent}\n\n"
+                                        )
+
+                                        ExAriChoice = input(
+                                            "============================================\n\n"
+                                            "Do you want to see inside of the code? (Yes/No) ").lower().strip()
+
+                                        if ExAriChoice == 'yes':
+                                            os.system('cls')
+                                            print(
+                                            "=================================================================\n\n"
+                                            "while True\n"
+                                            "\tTry:\n"
+                                            "\t\ta = eval(input(\"Input 1st number => \"))\n"
+                                            "\t\tb = eval(input(\"Input 2nd number => \"))\n"
+                                            "\t\tbreak\n"
+                                            "\texcept ValueError:\n"
+                                            "\t\tos.system('cls')\n"
+                                            "\t\tprint(\"\\nInvalid Input! Please enter a number only!\\n)\n\n"
+
+                                            "Addition = a + b\n"
+                                            "Subtracton = a - b\n"
+                                            "Multiplication = a * b\n"
+                                            "Division = a / b\n"
+                                            "Floor_Division = a // b\n"
+                                            "Modulus = a % b\n"
+                                            "Exponent = a ** b\n\n"
+
+                                            "print(\"\\n\"\n"
+                                            "f\"Addition = \{Addition}\\n\"\n"
+                                            "f\"Subtraction = {Subtracton}\\n\"\n"
+                                            "f\"Multiplication = {Multiplication}\\n\"\n"
+                                            "f\"Division = {Division}\n"
+                                            "f\"Floor Division (Whole Number) = {Floor_Division}\\n\"\n"
+                                            "f\"Modulus (Remainder) = {Modulus}\\n\"\n"
+                                            "f\"Exponent (Power) = {Exponent}\\n\\n\n"
+                                            ")\n\n"
+                                            "=================================================================\n\n"
+                                            )
+                                            input("Press ENTER to return to the menu...")
+                                            os.system('cls')
+                                        
+                                        else:
+                                            os.system('cls')
+                                            print("Returning...")
+
+                                    elif AriChoice == 'x':
                                         os.system('cls')
                                         print("Returning...")
+                                        break
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue
 
-                                elif AriChoice == 'x':
-                                    os.system('cls')
-                                    print("Returning...")
-                                    break
-                                else:
-                                    os.system('cls')
-                                    print("Invalid Input.. Please Try Again..")
-                                    continue
+                            elif OperatorsInput == 'b': #ASSIGNMENT OPERATOR
+                                os.system('cls')
+                                while True:
+                                    AssiChoice = input(
+                                        "===== ASSIGNMENT OPERATOR =====\n\n"
 
-                        elif OperatorsInput == 'b': #ASSIGNMENT OPERATOR
-                            os.system('cls')
-                            while True:
-                                AriChoice = input(
-                                    "===== ASSIGNMENT OPERATOR =====\n\n"
+                                        "A. DEFINITION\n"
+                                        "B. EXAMPLE\n"
+                                        "X. RETURN\n\n"
 
-                                    ""
-                                    ""
-                                    ""
+                                        "===============================\n"
+                                    ).lower().strip()
 
-                                    "================================\n"
+                                    if AssiChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                            "===== DEFINITION OF ASSIGNMENT OPERATOR =====\n\n"                                       
 
-                                ).lower().strip()
+                                            "it's one or two symbols that are used to\n"
+                                            "assign a value to a variable.\n\n"
 
-                        elif OperatorsInput == 'c': #RELATIONAL OPERATOR
-                            os.system('cls')
-                            while True:
-                                AriChoice = input(
-                                    "===== ARITHMETIC OPERATOR =====\n\n"
+                                            "=============================================\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                    
+                                    elif AssiChoice == 'b':
+                                        os.system('cls')
+                                        print(
+                                            "===== EXAMPLE OF ASSIGNMENT OPERATOR =====\n\n"
 
-                                    ""
-                                    ""
-                                    ""
+                                            "Input:\n"
+                                            "\tx += 10\n"
+                                            "\tx += 10\n" 
+                                            "\tx -= 5\n\n"
 
-                                    "================================\n"
+                                            "Output:\n"
+                                            "\t15\n\n"
 
-                                ).lower().strip()
+                                            "==========================================\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                    
+                                    elif AssiChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning...")
+                                        break
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue
 
-                        elif OperatorsInput == 'd': #LOGICAL OPERATOR
-                            os.system('cls')
-                            while True:
-                                AriChoice = input(
-                                    "===== ARITHMETIC OPERATOR =====\n\n"
+                            elif OperatorsInput == 'c': #RELATIONAL OPERATOR
+                                os.system('cls')
+                                while True:
+                                    RelaChoice = input(
+                                        "===== RELATIONAL OPERATOR =====\n\n"
 
-                                    ""
-                                    ""
-                                    ""
+                                        "A. DEFINITION\n"
+                                        "B. EXAMPLE\n"
+                                        "X. RETURN\n\n"
 
-                                    "================================\n"
+                                        "================================\n"
+                                    ).lower().strip()
 
-                                ).lower().strip()
+                                    if RelaChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                            "===== DEFINITION OF RELATIONAL OPERATOR =====\n\n"                                       
 
-                        elif OperatorsInput == 'x':
-                            os.system('cls')
-                            print("Returning to SUB MENU!")
-                            break
-                        else:
-                            os.system('cls')
-                            print("Invalid Input.. Please Try Again..")
-                            continue
+                                            "This are used to compare two values and\n"
+                                            "determine their relationship.\n"
+                                            "(also called comparison operators)\n\n"
+
+                                            "=============================================\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                    elif RelaChoice == 'b':
+                                        os.system('cls')
+                                        print("========== EXAMPLE OF RELATIONAL OPERATOR =========\n\n")
+                                        
+                                        while True:
+                                            try:
+                                                a = float(input("Input 1st number => "))
+                                                b = float(input("Input 2nd number => "))
+                                                break
+                                            except ValueError:
+                                                os.system('cls')
+                                                print("\nInvalid Input! Please enter a number only!\n")
+
+                                        Equal_to = a == b
+                                        Not_Equal_to = a != b
+                                        Greater_than = a > b
+                                        Less_than = a < b
+                                        Greater_than_or_Equal_to = a >= b
+                                        Less_than_or_Equal_to = a <= b
+
+                                        print("\n"
+                                        f"{a} Equal to {b} = {Equal_to}\n"
+                                        f"{a} Not Equal to {b} = {Not_Equal_to}\n"
+                                        f"{a} Greater than {b} = {Greater_than}\n"
+                                        f"{a} Less than {b} = {Less_than}\n"
+                                        f"{a} Greater than or Equal to {b} = {Greater_than_or_Equal_to}\n"
+                                        f"{a} Less Than or Equal to {b} = {Less_than_or_Equal_to}\n\n"
+                                        )
+
+                                        ExRelaChoice = input(
+                                            "======================================================\n\n"
+                                            "Do you want to see inside of the code? (Yes/No) ").lower().strip()
+                                        if ExRelaChoice == 'yes':
+                                            os.system('cls')
+                                            print(
+                                            "=================================================================\n\n"
+                                            "while True\n"
+                                            "\tTry:\n"
+                                            "\t\ta = eval(input(\"Input 1st number => \"))\n"
+                                            "\t\tb = eval(input(\"Input 2nd number => \"))\n"
+                                            "\t\tbreak\n"
+                                            "\texcept ValueError:\n"
+                                            "\t\tos.system('cls')\n"
+                                            "\t\tprint(\"\\nInvalid Input! Please enter a number only!\\n)\n\n"
+
+                                            "Equal_to = \t\t\ta == b\n"
+                                            "Not_Equal_to = \t\t\ta != b\n"
+                                            "Greater_than = \t\t\ta > b\n"
+                                            "Less_than = \t\t\ta < b\n"
+                                            "Greater_than_or_Equal_to = \ta >= b\n"
+                                            "Less_than_or_Equal_to = \ta <= b\n"
+
+                                            "print(\"\\n\"\n"
+                                            "f\"{a} Equal to {b} = {Equal_to}\\n\n"
+                                            "f\"{a} Not Equal to {b} = {Not_Equal_to}\\n\n"
+                                            "f\"{a} Greater than {b} = {Greater_than}\\n\n"
+                                            "f\"{a} Less than {b} = {Less_than}\\n\n"
+                                            "f\"{a} Greater than or Equal to {b} = {Greater_than_or_Equal_to}\\n\n"
+                                            "f\"{a} Less Than or Equal to {b} = {Less_than_or_Equal_to}\\n\\n\n"
+                                            ")\n\n"
+                                            "=================================================================\n\n"
+                                            )
+                                            input("Press ENTER to return to the menu...")
+                                            os.system('cls')
+                                        else:
+                                            os.system('cls')
+                                            print("Returning...")
+
+                                    elif RelaChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning...")
+                                        break
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue      
+
+                            elif OperatorsInput == 'd': #LOGICAL OPERATOR
+                                os.system('cls')
+                                while True:
+                                    LogiChoice = input(
+                                        "===== LOGICAL OPERATOR =====\n\n"
+
+                                        "A. DEFINITION\n"
+                                        "B. EXAMPLE\n"
+                                        "X. RETURN\n\n"
+
+                                        "============================\n"
+                                    ).lower().strip()
+                                    if LogiChoice == ('a'):
+                                        os.system('cls')
+                                        print(
+                                            "===== DEFINITION OF LOGICAL OPERATOR =====\n\n"                                       
+
+                                            "This are used to combine multiple\n"
+                                            "conditions or to invert a condition.\n"
+                                            "They return True or False based on the\n"
+                                            "logic applied.\n\n"
+
+                                            "==========================================\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+
+                                    elif LogiChoice == ('b'):
+                                        os.system('cls')
+                                        print(
+                                            "========== EXAMPLE OF RELATIONAL OPERATOR ==========\n\n" 
+
+                                            "Operator:\n"
+                                            "\tand\n"
+                                            "\tor\n"
+                                            "\tnot\n\n"
+
+                                            "Meaning:\n"
+                                            "\tTrue if both conditions are true\n"
+                                            "\tTrue if at least one condition is true\n"
+                                            "\tReverses the result (True → False, False → True)\n\n"
+
+                                            "Input:\n"
+                                            "\ta = (5 > 2) and (3 < 4)\n"
+                                            "\tb = (7 < 2) and (4 > 2)\n\n"
+
+                                            "\tc = (5 > 2) or (3 > 10)\n"
+                                            "\td = (5 < 2) or (11 < 9)\n\n"
+
+                                            "\te = not (3 > 4)\n"
+                                            "\tf = not (4 > 2)\n\n"
+
+                                            "print(\n"
+                                            "f\"{a}\"\n"
+                                            "f\"{b}\"\n"
+                                            "f\"{c}\"\n"
+                                            "f\"{d}\"\n"
+                                            "f\"{e}\"\n"
+                                            "f\"{f}\"\n"
+                                            ")\n\n"
+
+                                            "Output:\n"
+                                            "\tTrue\n"
+                                            "\tFalse\n"
+                                            "\tTrue\n"
+                                            "\tFalse\n"
+                                            "\tTrue\n"
+                                            "\tFalse\n\n"                                        
+
+                                            "====================================================\n\n" 
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                    
+                                    elif LogiChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning...")
+                                        break
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue      
+
+                            elif OperatorsInput == 'x':
+                                os.system('cls')
+                                print("Returning to SUB MENU!")
+                                break
+                            else:
+                                os.system('cls')
+                                print("Invalid Input.. Please Try Again..")
+                                continue
 
                     elif InputC == 'x':
                         os.system('cls')
