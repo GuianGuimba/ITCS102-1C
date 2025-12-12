@@ -1,6 +1,8 @@
 import os
 import sys
 import json
+import random
+
 os.system('cls')
 
 username = input("What is your name? ").title()
@@ -13,15 +15,16 @@ while True:
         while True:
             user_inputs = input(
                                 "=============== MAIN MENU ===============\n\n"
-                                "A. PRINTING IN PYTHON\n"
-                                "B. VARIABLES IN PYTHON\n" 
-                                "C. OPERATORS IN PYTHON\n" 
-                                "D. CONDITIONALS STATEMENT IN PYTHON\n"
-                                "E. LOOPS IN PYTHON\n"
-                                "F. LISTS IN PYTHON\n"
-                                "G. FUNCTIONS IN PYTON\n"
-                                "H. HELP\n"
-                                "X. EXIT\n\n"
+                                "[A] PRINTING IN PYTHON\n"
+                                "[B] VARIABLES IN PYTHON\n" 
+                                "[C] OPERATORS IN PYTHON\n" 
+                                "[D] CONDITIONALS STATEMENT IN PYTHON\n"
+                                "[E] LOOPS IN PYTHON\n"
+                                "[F] LISTS IN PYTHON\n"
+                                "[G] DICTIONARY IN PYTHON\n"
+                                "[H] FUNCTIONS IN PYTON\n"
+                                "[I] HELP\n"
+                                "[X] EXIT\n\n"
                                 "=========================================\n\n"
                             ).lower().strip()
             
@@ -31,9 +34,9 @@ while True:
                     InputA = input(
                                     "===== PRINTING IN PYTHON =====\n\n"
 
-                                    "A. DEFINITION OF print()\n"
-                                    "B. EXAMPLES OF print()\n"                                                                   
-                                    "X. RETURN TO MAIN MENU\n\n"
+                                    "[A] DEFINITION OF print()\n"
+                                    "[B] EXAMPLES OF print()\n"                                                                   
+                                    "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
                                     "=>"
@@ -74,11 +77,11 @@ while True:
                             ExampleInput = input(
                                                 "======== EXAMPLES OF print() ========\n\n"
 
-                                                "A. PRINTING A MESSAGE\n"
-                                                "B. PRINTING MORE THAN ONE OBJECT\n"
-                                                "C. PRINTING A VARIABLE\n"
-                                                "D. PRINTING CONCATENATED STRING\n"
-                                                "X. RETURN TO SUB MENU\n\n"
+                                                "[A] PRINTING A MESSAGE\n"
+                                                "[B] PRINTING MORE THAN ONE OBJECT\n"
+                                                "[C] PRINTING A VARIABLE\n"
+                                                "[D] PRINTING CONCATENATED STRING\n"
+                                                "[X] RETURN TO SUB MENU\n\n"
 
                                                 "=====================================\n"
                                                 "=>"
@@ -192,9 +195,9 @@ while True:
                     InputB = input(
                                     "===== VARIABLES IN PYTHON =====\n\n"
 
-                                    "A. DEFINITION OF VARIABLE\n"
-                                    "B. EXAMPLES OF VARIABLES\n"                                                                   
-                                    "X. RETURN TO MAIN MENU\n\n"
+                                    "[A] DEFINITION OF VARIABLE\n"
+                                    "[B] EXAMPLES OF VARIABLES\n"                                                                   
+                                    "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
                                     "=>"
@@ -259,9 +262,9 @@ while True:
                     InputC = input(
                                     "===== OPERATORS IN PYTHON =====\n\n"
 
-                                    "A. DEFINITION OF OPERATOR\n"
-                                    "B. EXAMPLES OF OPERATOR\n"                                                                   
-                                    "X. RETURN TO MAIN MENU\n\n"
+                                    "[A] DEFINITION OF OPERATOR\n"
+                                    "[B] EXAMPLES OF OPERATOR\n"                                                                   
+                                    "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
                                 ).lower().strip()
@@ -285,11 +288,11 @@ while True:
                             OperatorsInput = input(
                                 "===== EXAMPLE OF OPERATORS =====\n\n"
 
-                                "A. ARITHMETIC OPERATOR\n"
-                                "B. ASSIGNMENT OPERATOR\n"
-                                "C. RELATIONAL OPERATOR\n"
-                                "D. LOGICAL OPERATOR\n"
-                                "X. RETURN TO SUB MENU\n\n"
+                                "[A] ARITHMETIC OPERATOR\n"
+                                "[B] ASSIGNMENT OPERATOR\n"
+                                "[C] RELATIONAL OPERATOR\n"
+                                "[D] LOGICAL OPERATOR\n"
+                                "[X] RETURN TO SUB MENU\n\n"
 
                                 "================================\n"
                             ).lower().strip()
@@ -299,9 +302,9 @@ while True:
                                     AriChoice = input(
                                         "===== ARITHMETIC OPERATOR =====\n\n"
 
-                                        "A. DEFINITION\n"
-                                        "B. EXAMPLE\n"
-                                        "X. RETURN\n\n"
+                                        "[A] DEFINITION\n"
+                                        "[B] EXAMPLE\n"
+                                        "[X] RETURN\n\n"
 
                                         "===============================\n"
                                     ).lower().strip()
@@ -409,9 +412,9 @@ while True:
                                     AssiChoice = input(
                                         "===== ASSIGNMENT OPERATOR =====\n\n"
 
-                                        "A. DEFINITION\n"
-                                        "B. EXAMPLE\n"
-                                        "X. RETURN\n\n"
+                                        "[A] DEFINITION\n"
+                                        "[B] EXAMPLE\n"
+                                        "[X] RETURN\n\n"
 
                                         "===============================\n"
                                     ).lower().strip()
@@ -462,9 +465,9 @@ while True:
                                     RelaChoice = input(
                                         "===== RELATIONAL OPERATOR =====\n\n"
 
-                                        "A. DEFINITION\n"
-                                        "B. EXAMPLE\n"
-                                        "X. RETURN\n\n"
+                                        "[A] DEFINITION\n"
+                                        "[B] EXAMPLE\n"
+                                        "[X] RETURN\n\n"
 
                                         "================================\n"
                                     ).lower().strip()
@@ -565,9 +568,9 @@ while True:
                                     LogiChoice = input(
                                         "===== LOGICAL OPERATOR =====\n\n"
 
-                                        "A. DEFINITION\n"
-                                        "B. EXAMPLE\n"
-                                        "X. RETURN\n\n"
+                                        "[A] DEFINITION\n"
+                                        "[B] EXAMPLE\n"
+                                        "[X] RETURN\n\n"
 
                                         "============================\n"
                                     ).lower().strip()
@@ -612,12 +615,12 @@ while True:
                                             "\tf = not (4 > 2)\n\n"
 
                                             "print(\n"
-                                            "f\"{a}\"\n"
-                                            "f\"{b}\"\n"
-                                            "f\"{c}\"\n"
-                                            "f\"{d}\"\n"
-                                            "f\"{e}\"\n"
-                                            "f\"{f}\"\n"
+                                            "f\"{a}\\n\"\n"
+                                            "f\"{b}\\n\"\n"
+                                            "f\"{c}\\n\"\n"
+                                            "f\"{d}\\n\"\n"
+                                            "f\"{e}\\n\"\n"
+                                            "f\"{f}\\n\"\n"
                                             ")\n\n"
 
                                             "Output:\n"
@@ -669,7 +672,7 @@ while True:
                                     "== CONDITIONALS STATEMENT IN PYTHON ==\n\n"
 
                                     "A. DEFINITION OF CONDITIONAL STATEMENT\n"
-                                    "B. EXAMPLES OF CONDITIONAL STATEMENT\n"                                                                   
+                                    "B. EXAMPLE OF CONDITIONAL STATEMENT\n"                                                                   
                                     "X. RETURN TO MAIN MENU\n\n"
 
                                     "======================================\n"
@@ -689,7 +692,81 @@ while True:
 
                             "======================================================\n"
                         )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
+
                         continue
+
+                    if InputD == 'b': #EXAMPLE CONDITIONAL STATEMENT
+                        os.system('cls')
+                        print("===== EXAMPLE OF CONDITIONAL STATEMENT =====\n\n")
+                        while True:
+                            try:
+                                temp = float(input("Input the temperature here (In Celsius) \n==> "))
+                                break
+                            except ValueError:
+                                os.system('cls')
+                                print("\nInvalid Input! Please enter a number only!\n")
+
+                        if temp <= 0:
+                            print("Freezing Temperature")
+                        elif temp >= 1 and temp <= 20:
+                            print("Extremely Cold")
+                        elif temp >= 21 and temp <= 30:
+                            print("Moderately Cold")
+                        elif temp >= 31 and temp <= 37:
+                            print("Lukewarm")
+                        elif temp >= 38 and temp <= 45:
+                            print("Hot")
+                        elif temp >= 46 and temp <= 50:
+                            print("Boiling Hot")
+                        elif temp >= 51:
+                            print("Dangerously Hot!")
+                        else :
+                            print("Too low or Too Hot")
+
+                        ExCondiChoice = input(
+                                            "\n============================================\n\n"
+                                            "Do you want to see inside of the code? (Yes/No) ").lower().strip()
+                        if ExCondiChoice == 'yes':
+                                            os.system('cls')
+                                            print(
+                                            "=================================================================\n\n"
+
+                                            "while True:\n"
+                                            "\ttry:\n"
+                                                "\t\ttemp = float(input(\"Input the temperature here (In Celsius) \\n==> \"))\n"
+                                                "\t\tbreak\n"
+                                            "\texcept ValueError:\n"
+                                                "\t\tos.system('cls')\n"
+                                                "\t\tprint(\"\\nInvalid Input! Please enter a number only!\\n\")\n\n"
+
+                                            "if temp <= 0:\n"
+                                                "\tprint(\"Freezing Temperature\")\n"
+                                            "elif temp >= 1 and temp <= 20:\n"
+                                                "\tprint(\"Extremely Cold\")\n"
+                                            "elif temp >= 21 and temp <= 30:\n"
+                                                "\tprint(\"Moderately Cold\")\n"
+                                            "elif temp >= 31 and temp <= 37:\n"
+                                                "\tprint(\"Lukewarm\")\n"
+                                            "elif temp >= 38 and temp <= 45:\n"
+                                                "\tprint(\"Hot\")\n"
+                                            "elif temp >= 46 and temp <= 50:\n"
+                                                "\tprint(\"Boiling Hot\")\n"
+                                            "elif temp >= 51:\n"
+                                                "\tprint(\"Dangerously Hot!\")\n"
+                                            "else :\n"
+                                                "\tprint(\"Too low or Too Hot\")\n\n"
+
+                                            "=================================================================\n\n"
+                                            )
+                                            input("Press ENTER to return to the menu...")
+                                            os.system('cls')
+
+                        else:
+                            os.system('cls')
+                            print("Returning...")
+
 
                     elif InputD == 'x':
                         os.system('cls')
@@ -708,9 +785,9 @@ while True:
                     InputE = input(
                                     "===== LOOPS IN PYTHON =====\n\n"
 
-                                    "A. DEFINITION OF LOOPS\n"
-                                    "B. EXAMPLES OF LOOPS\n"                                                                   
-                                    "X. RETURN TO MAIN MENU\n\n"
+                                    "[A] DEFINITION OF LOOPS\n"
+                                    "[B] EXAMPLES OF LOOPS\n"                                                                   
+                                    "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
                                     "=>"
@@ -726,7 +803,328 @@ while True:
 
                             "=====================================\n"
                         )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
+
                         continue
+                    elif InputE == 'b':
+                        os.system('cls')
+                        while True:
+                            Loopchoice = input(
+                                "===== EXAMPLES OF LOOPS =====\n\n"
+                                
+                                "[A] FOR LOOP\n"
+                                "[B] WHILE LOOP\n"
+                                "[X] RETURN TO SUB MENU\n\n"
+
+                                "=============================\n\n"
+                                )
+                            
+                            if Loopchoice == 'a': #FOR LOOP
+                                os.system('cls')
+                                while True:
+                                    ForChoice = input(
+                                        "=========== FOR LOOPS ===========\n\n"
+                                        
+                                        "[A] DEFINITION\n"
+                                        "[B] EXAMPLE\n"
+                                        "[X] RETURN\n\n"
+
+                                        "=================================\n\n"
+                                    ).lower().strip()
+                                    if ForChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                            "===== FOR LOOP DEFINITION =====\n\n"
+                                            
+                                            "It' a command used to repeat a\n"
+                                            "set of instructions for each\n"
+                                            "item in a list, range, or\n"
+                                            "sequence.\n\n"
+
+                                            "===============================\n\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+
+                                    elif ForChoice == 'b':
+                                        os.system('cls')
+                                        print("==================== EXAMPLE OF FOR LOOP ====================\n")
+                                        while True:
+                                            try:
+                                                number = int(input("Input a number from 1-5 =>"))
+                                                if 1 <= number <= 5:
+                                                    break
+                                                else:
+                                                    raise ValueError
+                                                
+                                            except ValueError:
+                                                os.system('cls')
+                                                print("\nInvalid Input! Please enter an Integer range from 1-5 only!\n")
+                                        print("\n Example 1:\n")
+
+                                        for x in range (number):
+                                            print("Hello World")
+                                        print("\n Example 2:\n")
+
+                                        for i in range (1,number,1):
+                                            for x in range(1,i+1,1):
+                                                print("*",end=" ")
+                                            print( )
+                                        print("\n Example 3:\n")
+
+                                        for i in range(1,number,1):
+                                            for x in range(number,i,-1):
+                                                print(" ",end=" ")
+                                            for y in range(1,i,1):
+                                                print("*",end=" ")
+                                            for z in range(1,i+ 1):
+                                                print("*",end=" ")
+                                            print( )
+                                        
+                                        ExForChoice = input(
+                                            "=============================================================\n\n"
+                                            "Do you want to see inside of the code? (Yes/No) ").lower().strip()
+
+                                        if ExForChoice == 'yes': #For Loop Example > String
+                                            os.system('cls')
+                                            print(
+                                            "=================================================================================================\n\n"
+
+                                            "while True:\n"
+                                                "\ttry:\n"
+                                                    "\t\tnumber = int(input(\"Input a number from 1-5 =>\"))\n"
+                                                    "\t\tif 1 <= number <= 5:\n"
+                                                        "\t\t\tbreak\n"
+                                                    "\t\telse:\n"
+                                                        "\t\t\traise ValueError\n\n"
+                                                    
+                                                    "\t\texcept ValueError:\n"
+                                                        "\t\t\tos.system('cls')\n"
+                                                        "\t\t\tprint(\"\\nInvalid Input! Please enter an Integer range from 1-5 only!\\n\")\n\n"
+
+                                            "Example 1:\n\n"                                               
+
+                                                "\tfor x in range (number):\n"
+                                                    "\t\tprint(\"Hello World\")\n"
+
+                                            "Example 2:\n\n"                                                
+
+                                                "\tfor i in range (1,number,1):\n"
+                                                    "\t\tfor x in range(i,number+1):\n"
+                                                        "\t\t\tprint(\"*\",end=\" \")\n"
+                                                    "\t\tprint( )\n\n"
+
+                                            "Example 3:\n\n" 
+
+                                                "\tfor i in range(1,number,1):\n"
+                                                    "\t\tfor x in range(number,i,-1):\n"
+                                                        "\t\t\tprint(\" \",end=\" \")\n"
+                                                    "\t\tfor y in range(1,i,1):\n"
+                                                        "\t\t\tprint(\"*\",end=\" \")\n"
+                                                    "\t\tfor z in range(1,i+ 1):\n"
+                                                        "\t\t\tprint(\"*\",end=" ")\n"
+                                                    "\tprint( )\n\n"
+
+                                            "=================================================================================================\n\n"
+                                            )
+                                       
+                                            input("Press ENTER to return to the menu...")
+                                            os.system('cls')
+
+                                        else:
+                                            os.system('cls')
+                                            print("Returning...")
+
+
+                                    elif ForChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning!")
+                                        break
+
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue
+
+                            elif Loopchoice == 'b': #WHILE LOOP
+                                os.system('cls')
+                                while True:
+                                    WhiChoice = input(
+                                        "=========== WHILE LOOP ===========\n\n"
+                                        
+                                        "[A] DEFINITION\n"
+                                        "[B] EXAMPLE\n"
+                                        "[X] RETURN\n\n"
+
+                                        "===================================\n\n"
+                                    ).lower().strip()
+
+                                    if WhiChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                            "===== WHILE LOOP DEFINITION =====\n\n"
+                                            
+                                            "It's a control structure that\n"
+                                            "repeats a block of code as long\n"
+                                            "as a condition is true.\n\n"
+
+                                            "=================================\n\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+
+                                    elif WhiChoice == 'b': #Example of While Loop > Code
+                                        os.system('cls')
+                                        print("==================== EXAMPLE OF WHILE LOOP ====================\n")
+                                        while True:
+                                            try:
+                                                number = int(input("Input a number from 1-5 =>"))
+                                                if 1 <= number <= 5:
+                                                    break
+                                                else:
+                                                    raise ValueError
+                                                
+                                            except ValueError:
+                                                os.system('cls')
+                                                print("\nInvalid Input! Please enter an Integer range from 1-5 only!\n")
+                                        print("\nExample 1:\n")
+
+                                        x = 1
+                                        while x <= number:
+                                            print(x)
+                                            x += 1
+
+                                        print("\nExample 2:\n")
+
+                                        isDirty = True
+                                        while isDirty == True:
+                                            wash_again = input("Continue washing the clothes? (yes or no) ").lower()
+
+                                            if wash_again == "yes":
+                                                print("Washing the clothes again . . . ")
+                                                continue
+                                            else:
+                                                print("Washing stops now . . .")
+                                                break
+
+                                        print("\nExample 3:\n")
+
+                                        #import random
+
+                                        print("Welcome to Guessing Game!")
+
+                                        random_value = random.randint(1,number)
+                                        tries = 0
+                                        loop = True
+
+                                        while loop == True:
+                                            try:
+                                                number = int(input(f"Enter a number from 1-{number} => "))
+                                                tries += 1
+                                                if number == random_value:
+                                                    print("Yay! You won!!")
+                                                    break
+                                                else:
+                                                    print("try again")
+                                                    continue
+                                            except ValueError:
+                                                print("\nInvalid Input! Please enter an Integer range from 1-5 only!\n")
+
+                                        print(f"Hi {username} your Guess is Correct!, Number of tries is {tries}")
+
+                                        ExWhichoice = input(
+                                            "===============================================================\n"                                            
+                                            "Do you want to see inside of the code? (Yes/No) "
+                                            ).lower().strip()
+
+                                        if ExWhichoice == 'yes': #Example While Loop > String
+                                            os.system('cls')
+                                            print(
+                                            "=================================================================================================\n\n"
+
+                                            "while True:\n"
+                                                "\ttry:\n"
+                                                    "\t\tnumber = int(input(\"Input a number from 1-5 =>\"))\n"
+                                                    "\t\tif 1 <= number <= 5:\n"
+                                                        "\t\t\tbreak\n"
+                                                    "\t\telse:\n"
+                                                        "\t\t\traise ValueError\n\n"
+                                                    
+                                                    "\t\texcept ValueError:\n"
+                                                        "\t\t\tos.system('cls')\n"
+                                                        "\t\t\tprint(\"\\nInvalid Input! Please enter an Integer range from 1-5 only!\\n\")\n\n"
+
+                                            "Example 1:\n\n"
+
+                                            "x = 1\n"
+                                            "while x <= number:\n"
+                                                "\tprint(x)\n"
+                                                "\tx += 1\n\n"
+
+                                            "Example 2:\n\n" 
+
+                                            "isDirty = True\n"
+                                            "while isDirty == True:\n"
+                                                "\twash_again = input(\"Continue washing the clothes? (yes or no) \").lower()\n\n"
+
+                                                "\tif wash_again == \"yes\":\n"
+                                                    "\t\tprint(\"Washing the clothes again . . . \")\n"
+                                                    "\t\tcontinue\n"
+                                                "\telse:\n"
+                                                    "\t\tprint(\"Washing stops now . . .\")\n"
+                                                    "\t\tbreak\n\n"
+
+                                            "Example 3:\n\n"
+                                            
+                                            "import random\n\n"
+
+                                            "print(\"Welcome to Guessing Game!\")\n\n"
+
+                                            "random_value = random.randint(1,number)\n"
+                                            "tries = 0\n"
+                                            "loop = True\n\n"
+
+                                            "while loop == True:\n"
+                                                "\tnumber = eval(input(f\"Enter a number from 1-{number} => \"))\n"
+                                                "\ttries += 1\n"
+                                                "\tif number == random_value:\n"
+                                                    "\t\tprint(\"Yay! You won!!\")\n"
+                                                    "\t\tbreak\n"
+                                                "\telse:\n"
+                                                    "\t\tprint(\"try again\")\n"
+                                                    "\t\tcontinue\n\n"
+
+                                            "print(f\"Hi {username} your Guess is Correct!, Number of tries is {tries}\")\n\n"
+
+                                            "=================================================================================================\n\n"
+                                            )
+                                            input("Press ENTER to return to the menu...")
+                                            os.system('cls')
+
+                                        else:
+                                            os.system('cls')
+                                            print("Returning...")
+                                    
+                                    elif WhiChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning")
+                                        break
+
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue
+
+                            elif Loopchoice == 'x':
+                                os.system('cls')
+                                print("Returning to SUB MENU!")
+                                break
+
+                            else:
+                                os.system('cls')
+                                print("Invalid Input.. Please Try Again..")
+                                continue
 
                     elif InputE == 'x':
                         os.system('cls')
@@ -745,9 +1143,9 @@ while True:
                     InputF = input(
                                     "===== LISTS IN PYTHON =====\n\n"
 
-                                    "A. DEFINITION OF LISTS\n"
-                                    "B. EXAMPLES OF LISTS\n"                                                                   
-                                    "X. RETURN TO MAIN MENU\n\n"
+                                    "[A] DEFINITION OF LISTS\n"
+                                    "[B] EXAMPLES OF LISTS\n"                                                                   
+                                    "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
                                     "=>"
@@ -757,17 +1155,146 @@ while True:
                         print(
                             "======== DEFINITION OF LISTS ========\n\n"
 
-                            "In Python, a list is a built-in data\n"
-                            "type used to store an ordered,\n"
-                            "mutable collection of items. These\n"
-                            "items can be of various data types,\n"
-                            "including numbers, strings, booleans,\n"
-                            "other lists, or even more complex\n"
-                            "objects.\n\n"
+                            "It's an ordered collection of items\n"
+                            "that can store multiple values in a\n"
+                            "single variable. Lists can contain\n"
+                            "different data types (numbers,\n"
+                            "strings, etc.) and can be changed\n"
+                            "after creation.\n\n"
 
                             "=====================================\n"
                         )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
                         continue
+
+                    elif InputF == 'b':
+                        os.system('cls')
+                        while True:
+                            ListChoice = input(
+                                        "===== LISTS IN PYTHON =====\n\n"
+
+                                        "[A] SIMPLE LIST\n"
+                                        "[B] NESTED LIST\n"                                                                   
+                                        "[X] RETURN TO SUB MENU\n\n"
+
+                                        "===========================\n"
+                                    ).lower().strip()
+                            
+                            if ListChoice == 'a': # SIMPLE
+                                os.system('cls')
+                                while True:
+                                    SimChoice = input(
+                                    "====== SIMPLE LIST ======\n\n"
+
+                                    "[A] DEFINITION\n"
+                                    "[B] EXAMPLE\n"
+                                    "[X] RETURN\n\n"
+
+                                    "=========================\n\n"
+                                    ).lower().strip()
+
+                                    if SimChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                        "===== DEFINITION OF SIMPLE LIST=====\n\n"
+
+                                        "A simple list is a type of list\n"
+                                        "that contains single, individual\n"
+                                        "values only\n\n"
+
+                                        "====================================\n\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+
+                                    elif SimChoice == 'b':
+                                        os.system('cls')
+                                        print(
+                                            "========== EXAMPLE OF SIMPLE LIST ==========\n\n"
+
+                                            "fruits = [\"apple\",\"banana\",\"grapes\"]\n"
+                                            "numbers = [1,2,3,4,5]\n\n"
+
+                                            "============================================\n\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+                                    
+                                    elif SimChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning")
+                                        break
+
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue
+                            
+                            elif ListChoice == 'b': # NESTED
+                                os.system('cls')
+                                while True:
+                                    NesChoice = input(
+                                    "====== NESTED LIST ======\n\n"
+
+                                    "[A] DEFINITION\n"
+                                    "[B] EXAMPLE\n"
+                                    "[X] RETURN\n\n"
+
+                                    "=========================\n\n"
+                                    ).lower().strip()
+
+                                    if NesChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                        "===== DEFINITION OF NESTED LIST=====\n\n"
+
+                                        "A nested list is a list that\n"
+                                        "contains one or more lists inside\n"
+                                        "it.In other words, it is a list\n"
+                                        "within a list.\n\n"
+                                        
+                                        "====================================\n\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+                                    
+                                    elif NesChoice == 'b':
+                                        os.system('cls')
+                                        print(
+                                            "========== EXAMPLE OF NESTED LIST ==========\n\n"
+
+                                            "fruits = [[\"apple\",\"banana\",],[\"grapes\"]]\n"
+                                            "numbers = [[1,2],[3,4],[5,6]]\n\n"
+
+                                            "============================================\n\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+                                    
+                                    elif NesChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning")
+                                        break
+
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue
+
+                            elif ListChoice == 'x':
+                                os.system('cls')
+                                print("Returning to SUB MENU!")
+                                break
+
+                            else:
+                                os.system('cls')
+                                print("Invalid Input.. Please Try Again..")
+                                continue
 
                     elif InputF == 'x':
                         os.system('cls')
@@ -780,20 +1307,69 @@ while True:
                         continue
                 continue
             
-            elif user_inputs == 'g': #FUNCTION
+            elif user_inputs == 'g': #DICTIONARY
                 os.system('cls')
                 while True:
                     InputG = input(
+                                    "===== DICTIONARY IN PYTHON =====\n\n"
+
+                                    "[A] DEFINITION OF DICTIONARY\n"
+                                    "[B] EXAMPLE OF DICTIONARY\n"                                                                   
+                                    "[X] RETURN TO MAIN MENU\n\n"
+
+                                    "================================\n"
+                                    "=>"
+                                ).lower().strip()
+                    
+                    if InputG == 'a':
+                        os.system('cls')
+                        print(
+                            "========== DEFINITION OF DICTIONARY ==========\n\n"
+
+                            "A dictionary in Python is a data structure\n"
+                            "that stores information in key-value pairs.\n"
+                            "Each key has a value, and you use the key to\n"
+                            "access the value.\n\n"
+
+                            "==============================================\n\n"
+                        )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
+                        continue
+
+                    elif InputG == 'b':
+                        os.system('cls')
+                        print(
+                            "========== EXAMPLE OF DICTIONARY ==========\n\n"
+
+                            "Input"    
+                            "Temperature = {\n"
+                            "\t\"Key\":\"Value\",\n"
+                            "\t\"Cold\":\"0-26 celsius\",\n"
+                            "\t\"Neutral\":\"26-32 celsius\"\n"
+                            "\t\"Hot\":\"32-45+ celsius\"\n"
+                            "}\n\n"
+
+                            "===========================================\n\n"
+                        )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
+                        continue
+
+            elif user_inputs == 'h': #FUNCTION
+                os.system('cls')
+                while True:
+                    InputH = input(
                                     "===== FUNCTION IN PYTHON =====\n\n"
 
-                                    "A. DEFINITION OF FUNCTION\n"
-                                    "B. EXAMPLES OF FUNCTION\n"                                                                   
-                                    "X. RETURN TO MAIN MENU\n\n"
+                                    "[A] DEFINITION OF FUNCTION\n"
+                                    "[B] EXAMPLES OF FUNCTION\n"                                                                   
+                                    "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
                                     "=>"
                                 ).lower().strip()
-                    if InputG == 'a':
+                    if InputH == 'a':
                         os.system('cls')
                         print(
                             "======== DEFINITION OF FUNCTION ========\n\n"
@@ -809,7 +1385,7 @@ while True:
                         )
                         continue
 
-                    elif InputG == 'x':
+                    elif InputH == 'x':
                         os.system('cls')
                         print("Returning to MAIN MENU!")
                         break
