@@ -2,8 +2,66 @@ import os
 import sys
 import json
 import random
+import io
+import contextlib
 
 os.system('cls')
+
+def codingactivity(task,expected_output,expected_input):
+    os.system('cls')
+    print(
+        "==================== CODE ACTIVITY ====================\n\n"
+
+        f"Task: \n\t{task}\n\n"
+        f"Expected Output: {expected_output}\n"
+        f"Expected Input: {expected_input}\n\n"
+        "Type your code below.\n"
+        "Type END on a new line when you're done:\n"
+        )
+    
+    code_lines = []
+    while True:
+        line = input()
+        if line.strip().upper() == "END":
+            break
+        code_lines.append(line)
+
+    user_code = "\n".join(code_lines)
+
+    f = io.StringIO()
+
+    try:
+        with contextlib.redirect_stdout(f):
+            exec(user_code)
+        output = f.getvalue().strip()
+    except Exception as e:
+        print(
+            "Your code has an Error\n"
+            f"Error: {e}")
+        input(
+            "\n=======================================================\n\n"
+            "Press ENTER to return...")
+        return
+        
+    if output in expected_output.strip() and expected_input in user_code:
+        print(
+            "\nCorrect! the output and input matches the expected result!\n"
+            "\n=======================================================\n"
+        )
+        input("Press Enter to return...")
+        os.system('cls')
+
+    else:
+        print(
+            "\nIncorrect output or Missing input. Try again!"
+            f"\nYour output: {output}"
+            f"\nExpected Output: {expected_output}"
+            f"\nExpected Input: {expected_input}"
+        )
+        input(
+            "\n=======================================================\n"
+            "Press Enter to return...")
+        os.system('cls')
 
 username = input("What is your name? ").title()
 
@@ -15,6 +73,7 @@ while True:
         while True:
             user_inputs = input(
                                 "=============== MAIN MENU ===============\n\n"
+                                
                                 "[A] PRINTING IN PYTHON\n"
                                 "[B] VARIABLES IN PYTHON\n" 
                                 "[C] OPERATORS IN PYTHON\n" 
@@ -23,8 +82,8 @@ while True:
                                 "[F] LISTS IN PYTHON\n"
                                 "[G] DICTIONARY IN PYTHON\n"
                                 "[H] FUNCTIONS IN PYTON\n"
-                                "[I] HELP\n"
                                 "[X] EXIT\n\n"
+
                                 "=========================================\n\n"
                             ).lower().strip()
             
@@ -35,7 +94,8 @@ while True:
                                     "===== PRINTING IN PYTHON =====\n\n"
 
                                     "[A] DEFINITION OF print()\n"
-                                    "[B] EXAMPLES OF print()\n"                                                                   
+                                    "[B] EXAMPLES OF print()\n"
+                                    "[C] ACTIVITY\n"                                                                   
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
@@ -180,6 +240,15 @@ while True:
                                 continue                                                                                                 
                         continue
 
+                    elif InputA == 'c':
+                        codingactivity(
+                            "For this activity we will use print() function\n"
+                            "and the Expected Output must be \"Hello World\"",
+
+                            "Hello World",
+
+                            "print("
+                            )  
                     elif InputA == 'x':
                         os.system('cls')
                         print("Returning to MAIN MENU!")
@@ -196,7 +265,8 @@ while True:
                                     "===== VARIABLES IN PYTHON =====\n\n"
 
                                     "[A] DEFINITION OF VARIABLE\n"
-                                    "[B] EXAMPLES OF VARIABLES\n"                                                                   
+                                    "[B] EXAMPLES OF VARIABLES\n"
+                                    "[C] ACTIVITY\n"                                                                     
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
@@ -219,7 +289,7 @@ while True:
                         os.system('cls')
                         continue
 
-                    if InputB == 'b':
+                    elif InputB == 'b':
                         os.system('cls')
                         print(
                             "========================= EXAMPLE OF VARIABLES =========================\n\n"
@@ -243,6 +313,19 @@ while True:
                         input("Press ENTER to return to the menu...")
                         os.system('cls')
 
+                    elif InputB == 'c':
+                        codingactivity(
+                            "For this activity we will use VARIABLES.\n"
+                            "This activity must have two Variables,\n"
+                            "a and b. Specifically assign each one\n"
+                            "of them with their respected 'WORD'.\n"
+                            "use concatenation in print().\n"
+                            "expected output should be 'Hello World'",
+
+                            "HelloWorld",
+
+                            "="
+                        )
 
                     elif InputB == 'x':
                         os.system('cls')
@@ -263,7 +346,8 @@ while True:
                                     "===== OPERATORS IN PYTHON =====\n\n"
 
                                     "[A] DEFINITION OF OPERATOR\n"
-                                    "[B] EXAMPLES OF OPERATOR\n"                                                                   
+                                    "[B] EXAMPLES OF OPERATOR\n"
+                                    "[C] ACTIVITY\n"                                                                  
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
@@ -653,7 +737,18 @@ while True:
                                 os.system('cls')
                                 print("Invalid Input.. Please Try Again..")
                                 continue
+                    
+                    elif InputC == 'c':
+                        codingactivity(
+                            "For this activity we will use OPERATORS.\n"
+                            "This activity must have operator and output\n"
+                            "of 8",
 
+                            "8",
+
+                            "+="
+                            )
+                        
                     elif InputC == 'x':
                         os.system('cls')
                         print("Returning to MAIN MENU!")
@@ -671,9 +766,10 @@ while True:
                     InputD = input(
                                     "== CONDITIONALS STATEMENT IN PYTHON ==\n\n"
 
-                                    "A. DEFINITION OF CONDITIONAL STATEMENT\n"
-                                    "B. EXAMPLE OF CONDITIONAL STATEMENT\n"                                                                   
-                                    "X. RETURN TO MAIN MENU\n\n"
+                                    "[A] DEFINITION OF CONDITIONAL STATEMENT\n"
+                                    "[B] EXAMPLE OF CONDITIONAL STATEMENT\n"
+                                    "[C] ACTIVITY\n"                                                                   
+                                    "[X] RETURN TO MAIN MENU\n\n"
 
                                     "======================================\n"
                                     "=>"
@@ -767,7 +863,18 @@ while True:
                             os.system('cls')
                             print("Returning...")
 
+                    elif InputD == 'c':
+                        codingactivity(
+                            "For this activity we will use the\n"
+                            "condtional statement. This activity\n"
+                            "must have 'if' and 'else' and\n"
+                            "if variable x is yes (x = yes), then the\n"
+                            "output must be TRUE",
 
+                            "TRUE",
+
+                            "if"
+                        )
                     elif InputD == 'x':
                         os.system('cls')
                         print("Returning to MAIN MENU!")
@@ -786,7 +893,8 @@ while True:
                                     "===== LOOPS IN PYTHON =====\n\n"
 
                                     "[A] DEFINITION OF LOOPS\n"
-                                    "[B] EXAMPLES OF LOOPS\n"                                                                   
+                                    "[B] EXAMPLES OF LOOPS\n"
+                                    "[C] ACTIVITY\n"                                                                   
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
@@ -1125,7 +1233,21 @@ while True:
                                 os.system('cls')
                                 print("Invalid Input.. Please Try Again..")
                                 continue
+                    
+                    elif InputE == 'c':
+                        codingactivity(
+                            "For this activity we will use loop.\n"
+                            "This activity must use for loop to print\n"
+                            "5 Hello Worlds",
 
+                            "Hello World\n"
+                            "Hello World\n"
+                            "Hello World\n"
+                            "Hello World\n"
+                            "Hello World\n",
+
+                            "for"
+                        )
                     elif InputE == 'x':
                         os.system('cls')
                         print("Returning to MAIN MENU!")
@@ -1144,7 +1266,8 @@ while True:
                                     "===== LISTS IN PYTHON =====\n\n"
 
                                     "[A] DEFINITION OF LISTS\n"
-                                    "[B] EXAMPLES OF LISTS\n"                                                                   
+                                    "[B] EXAMPLES OF LISTS\n"
+                                    "[C] ACTIVITY\n"                                                                  
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
@@ -1175,7 +1298,8 @@ while True:
                                         "===== LISTS IN PYTHON =====\n\n"
 
                                         "[A] SIMPLE LIST\n"
-                                        "[B] NESTED LIST\n"                                                                   
+                                        "[B] NESTED LIST\n"
+                                        "[C] LIST/ARRAY METHOD\n"                                                                   
                                         "[X] RETURN TO SUB MENU\n\n"
 
                                         "===========================\n"
@@ -1214,8 +1338,16 @@ while True:
                                         print(
                                             "========== EXAMPLE OF SIMPLE LIST ==========\n\n"
 
-                                            "fruits = [\"apple\",\"banana\",\"grapes\"]\n"
-                                            "numbers = [1,2,3,4,5]\n\n"
+                                            "Input:\n"
+                                            "\tfruits = [\"apple\",\"banana\",\"grapes\"]\n"
+                                            "\tnumbers = [1,2,3,4,5]\n\n"
+
+                                            "\tprint(fruits[0])\n"
+                                            "\tprint(numbers[-1])\n\n"
+
+                                            "Output:\n"
+                                            "\tapple\n"
+                                            "\t5\n\n"
 
                                             "============================================\n\n"
                                         )
@@ -1286,6 +1418,67 @@ while True:
                                         print("Invalid Input.. Please Try Again..")
                                         continue
 
+                            elif ListChoice == 'c': # LIST/ARRAY METHOD
+                                os.system('cls')
+                                while True:
+                                    NesChoice = input(
+                                    "=== LIST/ARRAY METHOD ===\n\n"
+
+                                    "[A] DEFINITION\n"
+                                    "[B] EXAMPLE\n"
+                                    "[X] RETURN\n\n"
+
+                                    "=========================\n\n"
+                                    ).lower().strip()
+
+                                    if NesChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                        "===== DEFINITION OF LIST/ARRAY METHOD =====\n\n"
+
+                                        "These are built-in functions that are used\n"
+                                        "to add, remove, modify, or organize\n"
+                                        "elements in a list\n\n."
+                                        
+                                        "===========================================\n\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+                                    
+                                    elif NesChoice == 'b':
+                                        os.system('cls')
+                                        print(
+                                            "========== EXAMPLE OF LIST/ARRAY METHOD ==========\n\n"
+
+                                            ".append(item) - Adds an item to the end of the list\n"
+                                            ".insert(index, item) - Adds an item at a specific position\n"
+                                            ".extend(iterable) - Adds all items from another list or iterable\n"
+                                            ".remove(item) - Removes the first occurrence of a value\n"
+                                            ".pop(index) - Removes an item at a specific index (default is last)\n"
+                                            ".clear() - Removes all items from the list\n"
+                                            ".index(item) - Returns the index of the first occurrence\n"
+                                            ".count(item) - Returns how many times an item appears\n"
+                                            ".sort() - Sorts the list in ascending order\n"
+                                            ".reverse() - Reverses the order of items\n"
+                                            ".copy() - Returns a shallow copy of a list\n\n"
+
+                                            "==================================================\n\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+                                    
+                                    elif NesChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning")
+                                        break
+
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue       
+
                             elif ListChoice == 'x':
                                 os.system('cls')
                                 print("Returning to SUB MENU!")
@@ -1295,7 +1488,17 @@ while True:
                                 os.system('cls')
                                 print("Invalid Input.. Please Try Again..")
                                 continue
+                    
+                    elif InputF == 'c':
+                        codingactivity(
+                            "For this activity we will use LISTS.\n"
+                            "create a list like this [1,5,7,10,9]\n"
+                            "then print the 2nd largest number",
 
+                            "9",
+
+                            "[1,5,7,10,9]"
+                        )
                     elif InputF == 'x':
                         os.system('cls')
                         print("Returning to MAIN MENU!")
@@ -1314,7 +1517,8 @@ while True:
                                     "===== DICTIONARY IN PYTHON =====\n\n"
 
                                     "[A] DEFINITION OF DICTIONARY\n"
-                                    "[B] EXAMPLE OF DICTIONARY\n"                                                                   
+                                    "[B] EXAMPLE OF DICTIONARY\n" 
+                                    "[C] ACTIVITY\n"                                                                  
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "================================\n"
@@ -1342,7 +1546,7 @@ while True:
                         print(
                             "========== EXAMPLE OF DICTIONARY ==========\n\n"
 
-                            "Input"    
+                            "Input:\n"    
                             "Temperature = {\n"
                             "\t\"Key\":\"Value\",\n"
                             "\t\"Cold\":\"0-26 celsius\",\n"
@@ -1350,10 +1554,36 @@ while True:
                             "\t\"Hot\":\"32-45+ celsius\"\n"
                             "}\n\n"
 
+                            "print(Temperature[\"Cold\"]\n\n)"
+
+                            "Output:\n"
+                            "0-26 celsius\n\n"
+
                             "===========================================\n\n"
                         )
                         input("Press ENTER to return to the menu...")
                         os.system('cls')
+                        continue
+
+                    elif InputG == 'c':
+                        codingactivity(
+                            "For this activity we will use DICTIONARY.\n"
+                            "create a Dictionary list like this\n"
+                            "{\"Red\":\"Apple\",\"Yellow\":\"Banana\",\"Blue\":\"Grapes}\n"
+                            "the output must be 'Grapes'",
+
+                            "Grapes",
+
+                            '{"Red":"Apple","Yellow":"Banana","Blue":"Grapes"}'
+                        )
+                    elif InputG == 'x':
+                        os.system('cls')
+                        print("Returning to MAIN MENU!")
+                        break
+
+                    else:
+                        os.system('cls')
+                        print("Invalid Input.. Please Try Again..")
                         continue
 
             elif user_inputs == 'h': #FUNCTION
@@ -1363,7 +1593,8 @@ while True:
                                     "===== FUNCTION IN PYTHON =====\n\n"
 
                                     "[A] DEFINITION OF FUNCTION\n"
-                                    "[B] EXAMPLES OF FUNCTION\n"                                                                   
+                                    "[B] EXAMPLES OF FUNCTION\n"
+                                    "[C] ACTIVITY\n"                                                                   
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
@@ -1374,17 +1605,156 @@ while True:
                         print(
                             "======== DEFINITION OF FUNCTION ========\n\n"
 
-                            "In Python, a function is a named,\n"
-                            "reusable block of code designed to\n"
-                            "perform a specific task. Functions are\n"
-                            "fundamental to structured programming,\n"
-                            "promoting code modularity, reusability,\n"
-                            "and readability.\n\n"
+                            "A function in Python is a block of\n"
+                            "reusable code that performs a specific\n"
+                            "task. You can call the function whenever\n"
+                            "you need it, instead of rewriting the\n"
+                            "same code.\n\n"
 
                             "========================================\n"
                         )
+                        input("Press ENTER to return to the menu...")
+                        os.system('cls')
                         continue
 
+                    elif InputH == 'b':
+                        os.system('cls')
+                        while True:
+                            FunChoice = input(
+                                "===== EXAMPLES OF FUNCTION =====\n\n"
+
+                                "[A] BUILT-IN\n"
+                                "[B] USER-DEFINED\n"
+                                "[X] RETURN TO SUB MENU\n\n"
+
+                                "================================\n\n"
+                                ).lower().strip()
+                            
+                            if FunChoice == 'a': #BUILT IN
+                                os.system('cls')
+                                while True:
+                                    BuiChoice = input(
+                                        "====== BUILT-IN FUNCTIONS ======\n\n"
+
+                                        "[A] DEFINITION\n"
+                                        "[B] EXAMPLE\n"
+                                        "[X] RETURN\n\n"
+
+                                        "================================\n\n"
+                                        ).lower().strip()
+                                    
+                                    if BuiChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                            "======== DEFINITION OF BUILT-IN FUNCTION ========\n\n"
+
+                                            "It's a function that is already provided by\n"
+                                            "Python and can be used without creating or\n"
+                                            "importing anything.\n\n"
+
+                                            "=================================================\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+
+                                    elif BuiChoice == 'b':
+                                        os.system('cls')
+                                        print(
+                                            "======== EXAMPLE OF BUILT-IN FUNCTION ========\n\n"
+
+                                            "print() - displays output\n"
+                                            "input() - gets user input\n"
+                                            "int() - converts a value to an integer\n"
+                                            "float() - converts a value to a floating-point number\n"
+                                            "type() - shows the data type of a value\n\n"
+
+                                            "==============================================\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+
+                                    elif BuiChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning")
+                                        break
+
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue 
+                                    
+                            elif FunChoice == 'b': #USER DEFINED
+                                os.system('cls')
+                                while True:
+                                    UseChoice = input(
+                                        "====== USER-DEFINED FUNCTION ======\n\n"
+
+                                        "[A] DEFINITION\n"
+                                        "[B] EXAMPLE\n"
+                                        "[X] RETURN\n\n"
+
+                                        "====================================\n\n"
+                                        ).lower().strip()
+                                    
+                                    if UseChoice == 'a':
+                                        os.system('cls')
+                                        print(
+                                            "======== DEFINITION OF USER-DEFINED FUNCTION ========\n\n"
+
+                                            "It's a function that is created by the programmer\n"
+                                            "to perform a specific task\n\n"
+
+                                            "=====================================================\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+
+                                    elif UseChoice == 'b':
+                                        os.system('cls')
+                                        print(
+                                            "======== EXAMPLE OF USER-DEFINED FUNCTION ========\n\n"
+
+                                            "def greet():\n"
+                                            "\tprint(\"Hello World\")\n\n"
+
+                                            "==================================================\n"
+                                        )
+                                        input("Press ENTER to return to the menu...")
+                                        os.system('cls')
+                                        continue
+
+                                    elif UseChoice == 'x':
+                                        os.system('cls')
+                                        print("Returning")
+                                        break
+
+                                    else:
+                                        os.system('cls')
+                                        print("Invalid Input.. Please Try Again..")
+                                        continue 
+                            
+                            elif FunChoice == 'x':
+                                os.system('cls')
+                                print("Returning to SUB MENU!")
+                                break
+
+                            else:
+                                os.system('cls')
+                                print("Invalid Input.. Please Try Again..")
+                                continue 
+                    
+                    elif InputH == 'c':
+                        codingactivity(
+                            "For this activity we will use FUNCTION specifically User-Defined.\n"
+                            "Create a function named add_numbers that takes two parameters a and b.\n"
+                            "Return the sum of a and b. Call the function and print the result using 3 and 2.\n"
+                            "The Output must be 5",
+                            "5",
+                            "def"
+                        )
                     elif InputH == 'x':
                         os.system('cls')
                         print("Returning to MAIN MENU!")
