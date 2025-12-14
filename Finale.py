@@ -1,6 +1,4 @@
 import os
-import sys
-import json
 import random
 import io
 import contextlib
@@ -84,7 +82,8 @@ while True:
                                 "[H] FUNCTIONS IN PYTON\n"
                                 "[X] EXIT\n\n"
 
-                                "=========================================\n\n"
+                                "=========================================\n"
+                                "Type your choice => "
                             ).lower().strip()
             
             if user_inputs == 'a': #PRINTS
@@ -99,7 +98,7 @@ while True:
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
-                                    "=>"
+                                    "Type your choice => "
                                 ).lower().strip()
                     
                     if InputA == 'a':
@@ -144,7 +143,7 @@ while True:
                                                 "[X] RETURN TO SUB MENU\n\n"
 
                                                 "=====================================\n"
-                                                "=>"
+                                                "Type your choice => "
                                             ).lower().strip()
                             
                             if ExampleInput == 'a':
@@ -270,7 +269,7 @@ while True:
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
-                                    "=>"
+                                    "Type your choice => "
                                 ).lower().strip()
                     if InputB == 'a':
                         os.system('cls')
@@ -351,6 +350,7 @@ while True:
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "==============================\n"
+                                    "Type your choice => "
                                 ).lower().strip()
                     if InputC == 'a':
                         os.system('cls')
@@ -366,6 +366,7 @@ while True:
                         input("Press ENTER to return to the menu...")
                         os.system('cls')
                         continue
+
                     elif InputC == 'b': #EXAMPLES OF OPERATORS
                         os.system('cls')
                         while True:
@@ -379,6 +380,7 @@ while True:
                                 "[X] RETURN TO SUB MENU\n\n"
 
                                 "================================\n"
+                                "Type your choice => "
                             ).lower().strip()
                             if OperatorsInput == 'a': #ARITHMETIC OPERATOR
                                 os.system('cls')
@@ -391,6 +393,7 @@ while True:
                                         "[X] RETURN\n\n"
 
                                         "===============================\n"
+                                        "Type your choice => "
                                     ).lower().strip()
 
                                     if AriChoice == 'a':
@@ -501,6 +504,7 @@ while True:
                                         "[X] RETURN\n\n"
 
                                         "===============================\n"
+                                        "Type your choice => "
                                     ).lower().strip()
 
                                     if AssiChoice == 'a':
@@ -554,6 +558,7 @@ while True:
                                         "[X] RETURN\n\n"
 
                                         "================================\n"
+                                        "Type your choice => "
                                     ).lower().strip()
 
                                     if RelaChoice == 'a':
@@ -657,6 +662,7 @@ while True:
                                         "[X] RETURN\n\n"
 
                                         "============================\n"
+                                        "Type your choice => "
                                     ).lower().strip()
                                     if LogiChoice == ('a'):
                                         os.system('cls')
@@ -772,7 +778,7 @@ while True:
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "======================================\n"
-                                    "=>"
+                                    "Type your choice => "
                                 ).lower().strip()
                     if InputD == 'a':
                         os.system('cls')
@@ -898,7 +904,7 @@ while True:
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
-                                    "=>"
+                                    "Type your choice => "
                                 ).lower().strip()
                     if InputE == 'a':
                         os.system('cls')
@@ -926,6 +932,7 @@ while True:
                                 "[X] RETURN TO SUB MENU\n\n"
 
                                 "=============================\n\n"
+                                "Type your choice => "
                                 )
                             
                             if Loopchoice == 'a': #FOR LOOP
@@ -939,6 +946,7 @@ while True:
                                         "[X] RETURN\n\n"
 
                                         "=================================\n\n"
+                                        "Type your choice => "
                                     ).lower().strip()
                                     if ForChoice == 'a':
                                         os.system('cls')
@@ -1066,6 +1074,7 @@ while True:
                                         "[X] RETURN\n\n"
 
                                         "===================================\n\n"
+                                        "Type your choice => "
                                     ).lower().strip()
 
                                     if WhiChoice == 'a':
@@ -1271,7 +1280,7 @@ while True:
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
-                                    "=>"
+                                    "Type your choice => "
                                 ).lower().strip()
                     if InputF == 'a':
                         os.system('cls')
@@ -1303,6 +1312,7 @@ while True:
                                         "[X] RETURN TO SUB MENU\n\n"
 
                                         "===========================\n"
+                                        "Type your choice => "
                                     ).lower().strip()
                             
                             if ListChoice == 'a': # SIMPLE
@@ -1522,7 +1532,7 @@ while True:
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "================================\n"
-                                    "=>"
+                                    "Type your choice => "
                                 ).lower().strip()
                     
                     if InputG == 'a':
@@ -1598,7 +1608,7 @@ while True:
                                     "[X] RETURN TO MAIN MENU\n\n"
 
                                     "===========================\n"
-                                    "=>"
+                                    "Type your choice => "
                                 ).lower().strip()
                     if InputH == 'a':
                         os.system('cls')
@@ -1628,6 +1638,7 @@ while True:
                                 "[X] RETURN TO SUB MENU\n\n"
 
                                 "================================\n\n"
+                                "Type your choice => "
                                 ).lower().strip()
                             
                             if FunChoice == 'a': #BUILT IN
@@ -1641,6 +1652,7 @@ while True:
                                         "[X] RETURN\n\n"
 
                                         "================================\n\n"
+                                        "Type your choice => "
                                         ).lower().strip()
                                     
                                     if BuiChoice == 'a':
@@ -1696,6 +1708,7 @@ while True:
                                         "[X] RETURN\n\n"
 
                                         "====================================\n\n"
+                                        "Type your choice => "
                                         ).lower().strip()
                                     
                                     if UseChoice == 'a':
